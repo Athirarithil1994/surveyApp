@@ -1,0 +1,37 @@
+{
+    "database": "user-db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+      {
+        "name": "users",
+        "schema": [
+          { "column": "id", "value": "INTEGER PRIMARY KEY NOT NULL" },
+          { "column": "name", "value": "TEXT NOT NULL" },
+          { "column": "phoneNo", "value": "INTEGER NOT NULL" },
+          { "column": "email", "value": "TEXT NOT NULL" },
+          { "column": "password", "value": "TEXT NOT NULL" }
+        ],
+        "values": [
+          [1, "Athira", "12345678", "aa@bb.com", "password"]
+          
+        ]
+      },
+      {
+        "name": "surveys",
+        "schema": [
+       
+          { "column": "product", "value": "TEXT NOT NULL" },
+          { "column": "yearsOfUsage", "value": "INTEGER" },
+          { "column": "rate", "value": "INTEGER" },
+          { "column": "isFutureCustomer", "value": "TEXT" },
+          { "column": "userid", "value": "INTEGER" }
+       
+        ],
+        "values": [
+          [1, "Foil", 2, 4, "on"]
+        ]
+      }
+    ]
+  }

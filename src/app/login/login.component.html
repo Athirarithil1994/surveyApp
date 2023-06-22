@@ -1,0 +1,15 @@
+<ion-content class="ion-padding">
+  <form [formGroup]="loginForm">
+<ion-list>
+    <ion-item>
+      <ion-input label="Username" type="tel" formControlName="uname" placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Password" type="password" value="password" formControlName="password"></ion-input>
+    </ion-item>
+</ion-list>
+<ion-button expand="full" (click)="goToLogin()">Login</ion-button>
+<ion-button expand="full" color="secondary" (click)="goToSignup()">Signup</ion-button>
+</form>
+</ion-content>

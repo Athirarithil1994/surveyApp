@@ -1,0 +1,30 @@
+<ion-content class="ion-padding">
+    <h2 style="text-align: center;">Survey Form</h2>
+    <form [formGroup]="surveyForm">
+    <ion-list>
+        <ion-item>
+                  <ion-select aria-label="" class="" fill="outline" formControlName="product" label="Select Product">
+                    <ion-select-option value="chain">Key Chain</ion-select-option>
+                    <ion-select-option value="foil">Aluminium Tin Foil</ion-select-option>                  
+                  </ion-select>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input placeholder="How long you have known this product?" formControlName="yearsOfUsage" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="Please rate the product from 1 to 5" formControlName="rate" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-toggle labelPlacement="start" (ionChange)="changeFutureCustomerStatus($event)" formControlName="isFutureCustomer">Will purchase in future?</ion-toggle>
+        </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" (click)="submit()">Submit</ion-button>
+</form>
+<ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button size="small">
+      <ion-icon name="home" (click)="backToHome()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

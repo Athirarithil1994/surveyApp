@@ -1,0 +1,39 @@
+<ion-content class="ion-padding">
+  <ion-list>
+    <form [formGroup]="signupForm">
+      <ion-item>
+        <ion-input label="Name" formControlName="name" type="text" required placeholder="John"></ion-input>
+      </ion-item>
+      <div class="error"
+          *ngIf="!signupForm.controls['name'].valid  && (signupForm.controls.name.dirty || submitAttempt)"
+        >
+          <p>Please enter a valid name.</p>
+    </div>
+      <ion-item>
+        <ion-input label="Username" formControlName="phoneNo" type="tel" placeholder="888-888-8888"></ion-input>
+      </ion-item>
+      <div class="error"
+          *ngIf="!signupForm.controls['phoneNo'].valid  && (signupForm.controls.phoneNo.dirty || submitAttempt)"
+        >
+          <p>Please enter a valid phoneNo.</p>
+    </div>
+      <ion-item>
+        <ion-input label="Email" formControlName="email" type="email" placeholder="john@doe.com"></ion-input>
+      </ion-item>
+      <div class="error"
+          *ngIf="!signupForm.controls['email'].valid  && (signupForm.controls.email.dirty || submitAttempt)"
+        >
+          <p>Please enter a valid email.</p>
+    </div>
+      <ion-item>
+        <ion-input label="Password" formControlName="password" type="password" value="password"></ion-input>
+      </ion-item>
+      <div class="error"
+          *ngIf="!signupForm.controls['password'].valid  && (signupForm.controls.password.dirty || submitAttempt)"
+        >
+          <p>Please enter a valid password.</p>
+    </div>
+    </form>
+  </ion-list>
+  <ion-button expand="full" (click) = "doRegister()">Register</ion-button>
+  </ion-content>

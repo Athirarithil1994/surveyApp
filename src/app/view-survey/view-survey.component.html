@@ -1,0 +1,24 @@
+
+
+
+
+<ion-list lines="none">
+  
+  <ion-label >product,</ion-label>
+  <ion-label >Usage(Year),</ion-label>
+  <ion-label >Rating,</ion-label>
+  <ion-label >Future customer</ion-label>
+  
+  <ion-item *ngFor="let item of surveylist" >
+    
+    
+    <ion-label > {{item.product}}</ion-label>
+    <ion-label > {{item.yearsOfUsage}}</ion-label>
+   <ion-label >{{item.rate}}</ion-label>
+     <ion-label >{{item.isFutureCustomer}}</ion-label>
+
+  </ion-item>
+ 
+
+   
+</ion-list>
